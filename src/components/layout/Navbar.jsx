@@ -10,7 +10,7 @@ const Navbar = () => {
       className="fixed top-0 w-full z-50 py-5 px-6 sm:px-16 flex justify-between items-center glassmorphism"
     >
       <div className="text-2xl font-bold tracking-tighter text-white cursor-pointer hover:text-accent transition-colors">
-        Piyush<span className="text-accent">.</span>
+        Piyush Hatwar<span className="text-accent">.</span>
       </div>
       <ul className="hidden sm:flex gap-10 text-sm font-medium text-secondary">
         {['About', 'Skills', 'Projects', 'Timeline', 'Contact'].map((item) => (
