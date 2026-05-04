@@ -11,14 +11,8 @@ const Hero = () => {
     <section id="hero" className="relative w-full h-screen mx-auto">
       <StarsCanvas />
       
-      <div className="absolute inset-0 top-[150px] max-w-7xl mx-auto px-6 sm:px-16 flex flex-row items-start gap-5">
-        {/* Timeline accent line */}
-        <div className="flex flex-col justify-center items-center mt-5">
-          <div className="w-5 h-5 rounded-full bg-accent shadow-neon" />
-          <div className="w-1 sm:h-80 h-40 bg-gradient-to-b from-accent to-transparent" />
-        </div>
-
-        <div className="z-10 mt-2">
+      <div className="absolute inset-0 top-[150px] max-w-7xl mx-auto px-6 sm:px-16 flex flex-col items-center text-center">
+        <div className="z-10 w-full flex flex-col items-center mt-2">
           <motion.h1 
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -43,16 +37,14 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="mt-6 text-secondary max-w-2xl text-base sm:text-lg lg:text-xl leading-relaxed"
           >
-            Crafting intelligent systems, building dynamic applications, 
-            and exploring the vast landscape of Data Science and Artificial Intelligence.
-            Turning complex problems into elegant solutions.
+            I build real-world Python applications and explore AI systems to solve meaningful problems. Currently focused on Data Science, Backend Development, and AI Engineering.
           </motion.p>
 
           <motion.div 
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="mt-10 flex flex-wrap gap-6"
+            className="mt-10 flex flex-wrap justify-center gap-6"
           >
             <Button href="#projects">View Projects</Button>
             <Button href="#contact" outline>Contact Me</Button>
@@ -62,7 +54,7 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="mt-12 flex gap-6"
+            className="mt-10 flex justify-center gap-6"
           >
             <SocialIcon Icon={FaGithub} href={socialLinks.github} />
             <SocialIcon Icon={FaLinkedin} href={socialLinks.linkedin} />

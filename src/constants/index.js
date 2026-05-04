@@ -1,41 +1,57 @@
-export const skills = [
-  { name: "Python", icon: "🐍" },
-  { name: "Flask", icon: "🌶️" },
-  { name: "Django", icon: "🎸" },
-  { name: "FastAPI", icon: "⚡" },
-  { name: "JavaScript", icon: "🟨" },
-  { name: "React", icon: "⚛️" },
-  { name: "HTML & CSS", icon: "🎨" },
-  { name: "SQL", icon: "🗄️" },
-  { name: "APIs", icon: "🔌" },
-  { name: "OpenCV", icon: "👁️" },
-  { name: "AI Tools", icon: "🤖" },
-  { name: "Problem Solving", icon: "🧩" },
+export const skillCategories = [
+  {
+    title: "Backend Development",
+    skills: [
+      { name: "Python", icon: "🐍" },
+      { name: "Flask", icon: "🌶️" },
+      { name: "Django", icon: "🎸" },
+      { name: "FastAPI", icon: "⚡" },
+    ]
+  },
+  {
+    title: "Frontend Development",
+    skills: [
+      { name: "React", icon: "⚛️" },
+      { name: "JavaScript", icon: "🟨" },
+      { name: "HTML", icon: "🎨" },
+      { name: "CSS", icon: "✨" },
+    ]
+  },
+  {
+    title: "Tools & Technologies",
+    skills: [
+      { name: "SQL", icon: "🗄️" },
+      { name: "APIs", icon: "🔌" },
+      { name: "OpenCV", icon: "👁️" },
+      { name: "GitHub", icon: "🐙" },
+      { name: "AI Tools", icon: "🤖" },
+    ]
+  }
 ];
 
 export const projects = [
   {
-    name: "Job Assistant Pro",
-    description: "CareerBoost India is a modern, production-ready web application designed for job seekers. It serves as a daily assistant to build professional resumes, track opportunities, and practice for HR interviews in one unified dashboard.",
-    tags: ["React", "Web App", "Dashboard"],
+    name: "CareerBoost India",
+    description: "A comprehensive job-assistant platform solving the fragmented job search process. It provides tools for resume building, opportunity tracking, and HR interview practice in one unified dashboard. Built to accelerate career growth for freshers.",
+    tags: ["React", "Dashboard", "UI/UX"],
     image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2072&auto=format&fit=crop",
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/student-piyush25",
     live_demo_link: "https://example.com/",
   },
   {
-    name: "Student Attendance System",
-    description: "Real-time webcam attendance system using 128-D face embeddings and Anti-Spoofing (eye blink detection). Securely logs unique attendance directly to Excel, optimized for up to 100 students.",
-    tags: ["Python", "OpenCV", "Face Recognition"],
-    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=2070&auto=format&fit=crop",
-    source_code_link: "https://github.com/",
+    name: "Smart Attendance AI",
+    description: "An automated attendance tracking system eliminating manual roll calls. Utilizes webcam feeds to detect faces, performs liveness (anti-spoofing) checks via blink detection, and securely logs real-time attendance directly into an Excel database.",
+    tags: ["Python", "OpenCV", "Machine Learning"],
+    image: "/projects/attendance.png",
+    source_code_link: "https://github.com/student-piyush25",
     live_demo_link: "https://example.com/",
   },
   {
-    name: "Shadow Jump",
-    description: "A handcrafted 2D platformer built with Python and Pygame. Iteratively developed over weeks, featuring smooth gameplay mechanics, progressive difficulty, and highly polished retro visuals.",
+    name: "Shadow Jump Game",
+    description: "A handcrafted 2D platformer game built from scratch to study game loops and state management. Features progressive difficulty, smooth physics mechanics, and highly polished retro visuals, demonstrating clean code architecture.",
     tags: ["Python", "Pygame", "Game Dev"],
-    image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop",
-    source_code_link: "https://github.com/",
+    image: "/projects/shadowjump.png",
+    source_code_link: "https://github.com/student-piyush25",
     live_demo_link: "https://example.com/",
   },
 ];
@@ -48,16 +64,12 @@ export const achievements = [
 ];
 
 export const timeline = [
-  { title: "Started Programming", date: "2023", description: "Wrote my first 'Hello World' and fell in love with coding." },
-  { title: "Learned Python", date: "2024", description: "Dived deep into Python, learning data structures, algorithms, and automation." },
-  { title: "Built First Projects", date: "2024", description: "Created real-world web applications using Flask and Django." },
-  { title: "Started AI Engineering Journey", date: "2025", description: "Began exploring Machine Learning, OpenCV, and advanced Data Science." },
-  { title: "Internship Preparation", date: "2026", description: "Sharpened problem-solving skills and built premium portfolio projects." },
-  {
-    title: "Future Goals",
-    date: "2026+",
-    description: "Aiming to build scalable AI systems and innovate in the AI industry.",
-  },
+  { title: "Started Programming", date: "2023", description: "Wrote my first 'Hello World' and built a foundational understanding of logic and algorithms." },
+  { title: "Learned Python", date: "2024", description: "Dived deep into Python, mastering data structures, object-oriented design, and automation scripts." },
+  { title: "Built First Project", date: "2024", description: "Designed and launched complete real-world web applications utilizing frameworks like Flask and Django." },
+  { title: "Started AI Learning", date: "2024", description: "Expanded my expertise into Machine Learning, exploring OpenCV, facial recognition, and Data Science." },
+  { title: "Internship Preparation", date: "2025", description: "Focused heavily on refining my portfolio, solving complex problems, and preparing for professional roles." },
+  { title: "Future Goals", date: "2025+", description: "Aiming to build scalable AI systems, contribute to innovative products, and grow as an AI Engineer." },
 ];
 
 export const socialLinks = {

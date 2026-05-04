@@ -25,14 +25,6 @@
   .text-gradient {
     @apply bg-gradient-to-r from-[#00f6ff] to-[#9d00ff] bg-clip-text text-transparent;
   }
-  
-  .green-pink-gradient {
-    background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
-  }
-
-  .black-gradient {
-    background: linear-gradient(to right, #434343, #000000);
-  }
 }
 
 /* Custom Scrollbar */

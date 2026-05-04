@@ -20,9 +20,9 @@ const Contact = () => {
           variants={fadeIn("right", "tween", 0.2, 1)}
           className="flex-[0.6] glassmorphism p-8 rounded-3xl border border-white/10"
         >
-          <form 
-            action="https://formsubmit.co/hatwarpiyush2@gmail.com" 
-            method="POST" 
+          <form
+            action="https://formsubmit.co/hatwarpiyush2@gmail.com"
+            method="POST"
             className="mt-2 flex flex-col gap-6"
           >
             <input type="hidden" name="_subject" value="New message from Portfolio!" />
@@ -40,7 +40,7 @@ const Contact = () => {
               <span className="text-white font-medium mb-3">Your Message</span>
               <textarea rows={5} name="message" required placeholder="What do you want to say?" className="bg-tertiary/50 py-4 px-6 placeholder:text-secondary text-white rounded-xl outline-none border border-white/5 focus:border-accent focus:ring-1 focus:ring-accent transition-all resize-none" />
             </label>
-            
+
             <div className="mt-4">
               <Button type="submit">Send Message</Button>
             </div>
@@ -54,12 +54,11 @@ const Contact = () => {
           <div className="w-full flex flex-col gap-8 h-full justify-center">
             <div>
               <h3 className="text-4xl font-bold text-white mb-4">Let's Connect</h3>
-              <p className="text-secondary text-lg leading-relaxed">
-                I'm actively looking for internships and new opportunities in Data Science and AI Engineering. 
-                Whether you have a question or just want to say hi, my inbox is always open!
+              <p className="text-secondary text-[17px] leading-[1.8]">
+                I’m actively looking for internship opportunities in Python and AI. Feel free to connect — I’m always open to learning and collaboration.
               </p>
             </div>
-            
+
             <div className="flex flex-wrap gap-6 mt-4">
               <SocialLink href={socialLinks.github} Icon={FaGithub} label="GitHub" />
               <SocialLink href={socialLinks.linkedin} Icon={FaLinkedin} label="LinkedIn" />
@@ -74,9 +73,9 @@ const Contact = () => {
 }
 
 const SocialLink = ({ href, Icon, label }) => (
-  <a 
-    href={href} 
-    target="_blank" 
+  <a
+    href={href}
+    target="_blank"
     rel="noreferrer"
     className="flex flex-col items-center gap-2 group"
   >

@@ -21,7 +21,7 @@ const Timeline = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 0.6, delay: index * 0.1, type: "spring" }}
-              className="mb-12 relative group"
+              className="mb-16 relative group"
             >
               <div className="absolute sm:-left-[57px] -left-[33px] top-4 w-5 h-5 rounded-full bg-primary border-4 border-accent shadow-neon transition-transform duration-300 group-hover:scale-125" />
               <div className="glassmorphism p-6 sm:p-8 rounded-3xl border border-white/5 group-hover:border-accent/40 transition-all duration-300 relative overflow-hidden">

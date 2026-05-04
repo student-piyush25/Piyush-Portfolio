@@ -8,33 +8,33 @@ import { FaGithub } from 'react-icons/fa'
 
 const ProjectCard = ({ index, name, description, tags, image, source_code_link, live_demo_link }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.2, 0.75)}>
-      <div className="glassmorphism p-5 rounded-3xl sm:w-[360px] w-full border border-white/10 hover:border-accent/50 transition-all duration-300 group hover:-translate-y-2 hover:shadow-neon">
-        <div className="relative w-full h-[230px] overflow-hidden rounded-2xl">
-          <img src={image} alt={name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-          <div className="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          
-          <div className="absolute inset-0 flex justify-end m-3 gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-4 group-hover:translate-y-0">
-            <div onClick={() => window.open(source_code_link, "_blank")} className="bg-primary/80 backdrop-blur-sm w-10 h-10 rounded-full flex justify-center items-center cursor-pointer border border-white/20 hover:text-accent hover:border-accent transition-all">
-              <FaGithub size={20} />
-            </div>
-            <div onClick={() => window.open(live_demo_link, "_blank")} className="bg-primary/80 backdrop-blur-sm w-10 h-10 rounded-full flex justify-center items-center cursor-pointer border border-white/20 hover:text-accent hover:border-accent transition-all">
-              <ExternalLink size={20} />
-            </div>
-          </div>
+    <motion.div variants={fadeIn("up", "spring", index * 0.2, 0.75)} className="w-full">
+      <div className="glassmorphism p-6 rounded-3xl w-full flex flex-col h-full border border-white/10 hover:border-accent/50 transition-all duration-500 group hover:-translate-y-2 hover:shadow-neon">
+        <div className="relative w-full h-[230px] overflow-hidden rounded-2xl shrink-0">
+          <img src={image} alt={name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </div>
 
-        <div className="mt-6">
+        <div className="mt-6 flex flex-col flex-grow">
           <h3 className="text-white font-bold text-[24px] group-hover:text-accent transition-colors">{name}</h3>
-          <p className="mt-3 text-secondary text-[14px] leading-relaxed line-clamp-3">{description}</p>
-        </div>
+          <p className="mt-3 text-secondary text-[15px] leading-relaxed">{description}</p>
+          
+          <div className="mt-5 flex flex-wrap gap-2 mb-6">
+            {tags.map((tag) => (
+              <span key={tag} className="text-[13px] text-accent/90 font-medium px-3 py-1 bg-accent/10 border border-accent/20 rounded-full">
+                {tag}
+              </span>
+            ))}
+          </div>
 
-        <div className="mt-5 flex flex-wrap gap-2">
-          {tags.map((tag) => (
-            <span key={tag} className="text-[13px] text-accent/90 font-medium px-3 py-1 bg-accent/10 border border-accent/20 rounded-full">
-              #{tag}
-            </span>
-          ))}
+          <div className="mt-auto flex items-center gap-5 pt-4 border-t border-white/10">
+            <button onClick={() => window.open(source_code_link, "_blank")} className="flex items-center gap-2 text-[14px] font-semibold text-white hover:text-accent transition-colors">
+              <FaGithub size={18} /> Source Code
+            </button>
+            <button onClick={() => window.open(live_demo_link, "_blank")} className="flex items-center gap-2 text-[14px] font-semibold text-white hover:text-accent transition-colors">
+              <ExternalLink size={18} /> Live Demo
+            </button>
+          </div>
         </div>
       </div>
     </motion.div>
@@ -55,7 +55,7 @@ const Projects = () => {
         </motion.p>
       </div>
 
-      <div className="mt-14 flex flex-wrap gap-7 justify-start">
+      <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
